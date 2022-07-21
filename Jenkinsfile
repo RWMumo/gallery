@@ -22,7 +22,7 @@ stage('Install Dependencies') {
     }
     stage('Tests') {
       steps { 
-        sh 'npm gittest'
+        sh 'npm test'
       }
     }
 	stage('Deploy Application') {
