@@ -7,7 +7,7 @@ pipeline {
   stages { 
     stage('clone repository') {
       steps { 
-       sh 'echo "here we will Build"'
+       git 'https://github.com/RWMumo/gallery.git'
       }
     }
      stage('Build the project') {
@@ -17,12 +17,12 @@ pipeline {
     }
 stage('Install Dependencies') {
       steps { 
-        sh 'echo "install"'
+        sh 'npm install'
       }
     }
     stage('Tests') {
       steps { 
-        sh 'echo "test"'
+        sh 'npm gittest'
       }
     }
 	stage('Deploy Application') {
