@@ -1,3 +1,4 @@
+require("dotenv").config()
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
@@ -49,6 +50,7 @@ app.use('/image', image);
  
 const PORT = process.env.PORT || 5000;
 app.listen(PORT,() =>{
+    console.log(MONGODB_URI)
     console.log(`Server is listening at http://localhost:${PORT}`)
 });
 
